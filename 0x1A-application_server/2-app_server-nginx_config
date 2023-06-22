@@ -1,7 +1,7 @@
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
-    add_header X-Served-By 59259-web-01;
+    add_header X-Served-By 59148-web-01;
     root   /var/www/html;
     index  index.html index.htm;
     location /hbnb_static {
@@ -18,8 +18,7 @@ server {
     }
 
     location = /airbnb-onepage/ {
-	include proxy_params;
-	proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+        include proxy_params;
+        proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
     }
 }
-
